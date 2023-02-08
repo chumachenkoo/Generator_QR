@@ -9,7 +9,7 @@ def post_login():
 
         user = get_user_by_mail(user_email)
 
-        if user is not None and user_password == user[0].password:
+        if len(user) != 0 and user_password == user[0].password:
             session['id'] = user[0].id
             return redirect(url_for('user_account'))
 

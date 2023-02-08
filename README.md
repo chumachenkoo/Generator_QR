@@ -63,7 +63,7 @@ python run.py
 3. Нажимаем кнопку Registr
 4. Нас переадресовывает на главную страницу, страницу авторизации
 
-![alt text](https://drive.google.com/file/d/1MRvZB8pQ_aP10BR58m02aIxPP0CRsOzO/view?usp=share_link)
+![alt text](images/Untitled.png)
 
 ### Авторизация:
 
@@ -71,13 +71,13 @@ python run.py
 2. Нажимаем кнопку Sign in
 3. Нас переадресовывает на страницу Account
 
-![alt text](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2a92dffa-ed20-4b19-8317-4324f8878630/Untitled.png)
+![alt text](images/Untitled1.png)
 
 ### Просмотр кодов:
 
 - На странице Account отображаются ранее сгенерированные коды
 
-![alt text](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/151a4276-a586-4e85-88ce-8ca0bb32b736/Untitled.png)
+![alt text](images/Untitled2.png)
 
 ### Создание qr кода:
 
@@ -86,7 +86,7 @@ python run.py
 3. Нажмите на кнопку Convert to QR
 4. Нас перебросит на страницу Account, где вы увидите ваш qr код
 
-![alt text](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/331bb69d-a746-485c-aa7e-2e66734a36ef/Untitled.png)
+![alt text](images/Untitled3.png)
 
 ### Выход из сесии:
 

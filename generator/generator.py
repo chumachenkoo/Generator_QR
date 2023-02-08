@@ -4,7 +4,7 @@ import base64
 from models.qr_code import QRcode
 
 
-def generate(data, user):
+def generate(data: str, user: int) -> QRcode:
     image = qrcode.make(data)
     buffer = BytesIO()
     image.save(buffer, format='png')

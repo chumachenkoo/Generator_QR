@@ -63,7 +63,7 @@ python run.py
 3. Нажимаем кнопку Registr
 4. Нас переадресовывает на главную страницу, страницу авторизации
 
-![alt text](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b8c938c8-b022-408f-93e4-8c1c0333c2a5/Untitled.png)
+![alt text](https://drive.google.com/file/d/1MRvZB8pQ_aP10BR58m02aIxPP0CRsOzO/view?usp=share_link)
 
 ### Авторизация:
 

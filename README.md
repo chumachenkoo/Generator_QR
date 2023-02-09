@@ -1,94 +1,94 @@
 # QR Generator
 
-Этот проект является веб-приложением, разработанным с использованием языка Python и фреймворка Flask. Целью проекта является предоставление удобного интерфейса для генерации qr кодов пользоваталем.
+This project is a web application developed using the Python language and the Flask framework. The goal of the project is to provide a user-friendly interface for generating qr codes by the user
 
-## **Описание приложения:**
+## **Application Description:**
 
-### Приложение позволяет пользователю:
+### The application allows the user to:
 
-1. Регистрацию пользователя на сайте
-2. Авторизацию пользователя и выход из сеанса
-3. Генерацию qr кодов
-4. Просмотр сгенерированных кодов в личном кабинете пользователя
+1. User registration on the site 
+2. User authorization and session exit 
+3. Generation of qr codes 
+4. Viewing generated codes in the user's personal account
 
-### Дополнительно приложение:
+### Additional functions:
 
-1. Кодирует данные qr кода для сохранения их в базу
-2. Декодирует данные qr кода для визуализации их на странице
-3. Проверяет почту пользователя в базе
-4. Сверяет почту пользователя в базе с введенным паролем на сайте
+1. Encodes qr code data to save it to the database 
+2. Decodes qr code data to render it on the page 
+3. Checks the user's mail in the database 
+4. Checks the user's mail in the database with the entered password on the site
 
-## **Архитектура:**
+## **Architecture:**
 
-Приложение состоит из следующих компонентов:
+The application consists of the following components:
 
-- Веб-сервер: Используется Flask для обслуживания HTTP-запросов и отдачи ответов.
-- База данных: Мы используем SQLite для хранения данных пользователей и данных qr кодов
-- Модели: Это классы Python, которые определяют структуру данных в базе данных и определяют, как эти данные могут быть хранены, выбраны и изменены.
-    - Существует модель пользователя, которая включает в себя: никнейм, почту, пароль, связь с qr кодами в таблице кодов, которые принадлежат пользователю
-    - Существует модель qr кода, которая включает в себя: защифрованные данные кода и id пользователя-владельца
-- Шаблоны: Это HTML-файлы, которые определяют внешний вид веб-страниц.
-- Контроллеры: Это функции Flask, которые обрабатывают HTTP-запросы, используя модели и шаблоны, и возвращают ответы веб-серверу.
+- Web Server: Used by Flask to serve HTTP requests and return responses.
+- Database: We use SQLite to store user data and qr code data
+- Models: These are Python classes that define the structure of data in a database and define how that data can be stored, retrieved, and modified.
+- There is a user model, that includes: nickname, mail, password, link with qr codes in the code table, which belong to the user
+- There is a qr code model that includes: encrypted code data and owner user id
+- Templates: These are HTML files that define the look and feel of web pages.
+- Controllers: These are Flask functions that process HTTP requests using models and templates and return responses to the web server.
 
-Когда пользователь отправляет HTTP-запрос к веб-серверу, контроллер получает запрос и использует модели, чтобы получить или сохранить qr код в базу SQLite
+- When the user sends an HTTP request to the web server, the controller receives the request and uses the models to get or save the qr code to the SQLite database
 
-## **Как запустить:**
+## **How to launch:**
 
-1. Клонируйте этот репозиторий на свой компьютер:
+1. Clone this repository on your computer:
 
 ```
 git clone https://github.com/chumachenkoo/Generator_QR.git
 ```
 
-1. Установите зависимости:
+2. Install dependencies:
 
 ```
 pip install -r requirements.txt
 ```
 
-1. Запустите приложение:
+3. Run the application:
 
 ```
 python run.py
 ```
 
-Теперь приложение должно быть доступно по адресу **[http://localhost:5000/](http://localhost:5000/)**.
+The application should now be available at **[http://localhost:5000/](http://localhost:5000/)**.
 
-## **Как пользоваться приложением:**
+## **How to use the application:**
 
-### Регистрация:
+### Registration:
 
-1. Нажимаем на кнопку Sign-up
-2. Заполняем данные
-3. Нажимаем кнопку Registr
-4. Нас переадресовывает на главную страницу, страницу авторизации
+1. Click on the Sign-up button 
+2. Filling in the data 
+3. Click the Registry button 
+4. We are redirected to the main page, the authorization page
 
 ![alt text](images/Untitled.png)
 
-### Авторизация:
+### Authorization:
 
-1. Вводим данные в поля
-2. Нажимаем кнопку Sign in
-3. Нас переадресовывает на страницу Account
+1. Entering data into fields 
+2. Press the Sign in button 
+3. We are redirected to the Account page
 
 ![alt text](images/Untitled1.png)
 
-### Просмотр кодов:
+### View codes:
 
-- На странице Account отображаются ранее сгенерированные коды
+- The Account page displays previously generated codes
 
 ![alt text](images/Untitled2.png)
 
-### Создание qr кода:
+### Creation of qr code:
 
-1. Нажмите на кнопку Generator
-2. Введите данные в поле
-3. Нажмите на кнопку Convert to QR
-4. Нас перебросит на страницу Account, где вы увидите ваш qr код
+1. Click on the Generator button 
+2. Enter data in the field 
+3. Click on Convert to QR button 
+4. We will be redirected to the Account page, where you will see your qr code
 
 ![alt text](images/Untitled3.png)
 
-### Выход из сесии:
+### Exit session:
 
-- Нажать на кнопку Logout
-- Нас перебросит на главную страницу
+- Click on the Logout button 
+- We will be redirected to the main page

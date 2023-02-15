@@ -1,27 +1,33 @@
-from flask import session, redirect, url_for, render_template, request, flash
+from flask import session, redirect, url_for, render_template, flash
 from models.user import User
 from app import db
-from account.authentication import get_user_by_mail
+from forms.registration import RegistrationForm
+from sqlalchemy.exc import IntegrityError
 
 
 def get_registration():
     if 'id' in session:
         return redirect(url_for('user_account'))
 
-    return render_template('registration.html')
+    form = RegistrationForm()
+    return render_template('registration.html', form=form)
 
 
 def post_registration():
-    if request.method == "POST":
-        user = User(username=request.form.get('username'),
-                    email=request.form.get('email'),
-                    password=request.form.get('password'))
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        try:
+            user = User(username=form.username.data,
+                        email=form.email.data,
+                        password=form.password.data)
+            db.session.add(user)
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
+            flash('User has already been registered!')
+        else:
+            flash('You have successfully registered!')
+            return redirect(url_for('get_login'))
+    flash('Use valid data!')
+    return redirect(url_for('get_registration'))
 
-        if get_user_by_mail(user.email):
-            flash('User has been already registered!')
-            return render_template('registration.html')
-
-        db.session.add(user)
-        db.session.commit()
-
-        return redirect(url_for('user_account'))

@@ -1,5 +1,3 @@
-
-
 def decode(user_data: list) -> list:
     result = []
     for data in user_data[0].qr_codes:

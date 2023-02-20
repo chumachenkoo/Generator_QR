@@ -63,7 +63,7 @@ The application should now be available at **[http://localhost:5000/](http://loc
 3. Click the Registry button 
 4. We are redirected to the main page, the authorization page
 
-![alt text](images/Untitled.png)
+![alt text](static/images/Untitled.png)
 
 ### Authorization:
 
@@ -71,13 +71,13 @@ The application should now be available at **[http://localhost:5000/](http://loc
 2. Press the Sign in button 
 3. We are redirected to the Account page
 
-![alt text](images/Untitled1.png)
+![alt text](static/images/Untitled1.png)
 
 ### View codes:
 
 - The Account page displays previously generated codes
 
-![alt text](images/Untitled2.png)
+![alt text](static/images/Untitled2.png)
 
 ### Creation of qr code:
 
@@ -86,7 +86,7 @@ The application should now be available at **[http://localhost:5000/](http://loc
 3. Click on Convert to QR button 
 4. We will be redirected to the Account page, where you will see your qr code
 
-![alt text](images/Untitled3.png)
+![alt text](static/images/Untitled3.png)
 
 ### Exit session:
 

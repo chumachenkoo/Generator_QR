@@ -40,19 +40,24 @@ The application consists of the following components:
 git clone https://github.com/chumachenkoo/Generator_QR.git
 ```
 
-2. Install dependencies:
+2. Install Docker and Docker Compose on your machine.
 
 ```
-pip install -r requirements.txt
+Docker documentation: https://docs.docker.com/get-docker/
+Docker Compose documentation: https://docs.docker.com/compose/install/
 ```
 
-3. Run the application:
+3. Launch the Docker daemon on your machine:
+    
+    ```
+4. Build and start the application using Docker Compose:
 
 ```
-python run.py
+docker-compose up --build
 ```
 
-The application should now be available at **[http://localhost:5000/](http://localhost:5000/)**.
+
+The application should now be available at **[http://localhost:5050/](http://localhost:5050/)**.
 
 ## **How to use the application:**
 

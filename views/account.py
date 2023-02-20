@@ -11,3 +11,4 @@ def user_account():
         return render_template('account.html', user=user_data, qr_codes=qr)
 
     return redirect(url_for('get_login'))
+

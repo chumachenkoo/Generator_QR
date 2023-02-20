@@ -49,7 +49,6 @@ Docker Compose documentation: https://docs.docker.com/compose/install/
 
 3. Launch the Docker daemon on your machine:
     
-    ```
 4. Build and start the application using Docker Compose:
 
 ```
